@@ -9,9 +9,10 @@ def transform_matches():
     
     df = pd.read_json(files[0])
 
-    df_partidos = df[["match_number","group_name","home_team","home_team_code","away_team","away_team_code","home_score","away_score"]]
+    df_partidos = df[["match_number","round","group_name","home_team","home_team_code","away_team","away_team_code","home_score","away_score"]]
     df_partidos = df_partidos.rename(
         columns={'match_number': 'numero_partido', 
+                 'round': 'ronda',
                  'group_name': 'grupo', 
                  'home_team_code': 'codigo_equipo_local', 
                  'away_team_code': 'codigo_equipo_visitante',
