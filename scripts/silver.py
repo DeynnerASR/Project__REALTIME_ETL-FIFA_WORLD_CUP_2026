@@ -24,5 +24,6 @@ def transform_matches():
 
     print(df_partidos)
     #print(df.columns)
+    return df_partidos
     
 transform_matches()
