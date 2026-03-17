@@ -15,8 +15,7 @@ def extract_matches(status):
 
     payload = {}
     headers = {
-    'Authorization': f"Bearer {KEY}",
-    'Authorization': 'Bearer wc2026_3ZeeJjWmcFam5eA6HkUdswBS'
+    'Authorization': f"Bearer {KEY}"
     }
 
 
