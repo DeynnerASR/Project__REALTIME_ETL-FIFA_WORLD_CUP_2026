@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripción Polla Mundialista IEEE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesRegistro.css"/>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <div class="logo-icon">⚽</div>
+          IEEE Polla Mundialista
+        </a>
+        <span class="nav-badge"><span>●</span> Inscripciones abiertas</span>
+      </div>
+    </nav>
+    <div class="page-wrapper">
+      <div class="stepper">
+        <div class="stepper-line">
+          <div class="stepper-line-fill" id="stepperFill"></div>
+        </div>
+        <div class="stepper-steps">
+          <div class="step-item active" id="stepItem1">
+            <div class="step-circle" id="stepCircle1">1</div>
+            <div class="step-label">Detalles</div>
+          </div>
+          <div class="step-item" id="stepItem2">
+            <div class="step-circle" id="stepCircle2">2</div>
+            <div class="step-label">Predicciones</div>
+          </div>
+          <div class="step-item" id="stepItem3">
+            <div class="step-circle" id="stepCircle3">3</div>
+            <div class="step-label">Confirmar</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="step-panel active" id="panel1">
+          <div class="form-card-header">
+            <div class="header-icon">👤</div>
+            <div>
+              <h2>Información Personal</h2>
+              <p>Tus datos para contactarte si eres ganador</p>
+            </div>
+          </div>
+          <div style="padding: 2.5rem">
+            <div class="fields-grid two-col">
+              <div class="field-group" id="fg-nombre">
+                <label for="nombre">Nombre Completo <span>*</span></label>
+                <input
+                  type="text"
+                  id="nombre"
+                  placeholder="Ej. Laura Martínez Pérez"
+                  autocomplete="name"
+                />
+                <span class="field-error"
+                  >Por favor ingresa tu nombre completo</span
+                >
+              </div>
+              <div class="field-group" id="fg-codigo">
+                <label for="codigo">Código Estudiantil <span>*</span></label>
+                <input
+                  type="text"
+                  id="codigo"
+                  placeholder="Ej. 20231234"
+                  maxlength="12"
+                />
+                <span class="field-error">Ingresa tu código estudiantil</span>
+              </div>
+              <div class="field-group" id="fg-correo">
+                <label for="correo">Correo Electrónico <span>*</span></label>
+                <input
+                  type="email"
+                  id="correo"
+                  placeholder="usuario@udistrital.edu.co"
+                  autocomplete="email"
+                />
+                <span class="field-error">Ingresa un correo válido</span>
+              </div>
+              <div class="field-group" id="fg-telefono">
+                <label for="telefono">Teléfono / WhatsApp <span>*</span></label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  placeholder="Ej. 3001234567"
+                  maxlength="12"
+                />
+                <span class="field-error">Ingresa tu número de teléfono</span>
+              </div>
+              <div
+                class="field-group"
+                id="fg-proyecto"
+                style="grid-column: 1/-1"
+              >
+                <label for="proyecto">Proyecto Curricular <span>*</span></label>
+                <select id="proyecto">
+                  <option value="" disabled selected>
+                    Selecciona tu carrera
+                  </option>
+                  <option>Tecnología en Sistematización de Datos</option>
+                  <option>Tecnología en Construcciones Civiles</option>
+                  <option>Tecnología en Electricidad de Media y Baja Tensión</option>
+                  <option>Tecnología en Electrónica Industrial</option>
+                  <option>Tecnología en Gestión de la Producción Industrial</option>
+                  <option>Tecnología en Mecánica Industrial</option>
+                  <option>Ingeniería Civil</option>
+                  <option>Ingeniería de Producción</option>
+                  <option>Ingeniería Electríca</option>
+                  <option>Ingeniería en Control y Automatización</option>
+                  <option>Ingeniería en Telecomunicaciones</option>
+                  <option>Ingeniería en Telemática</option>
+                  <option>Ingeniería Mecánica</option>
+                  <option>Otro</option>
+                </select>
+                <span class="field-error"
+                  >Selecciona tu proyecto curricular</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step-panel" id="panel2">
+          <div class="form-card-header">
+            <div class="header-icon">📊</div>
+            <div>
+              <h2>Predicción del Mundial</h2>
+              <p>Ingresa los marcadores que predices para cada partido</p>
+            </div>
+          </div>
+          <div style="padding: 2.5rem">
+            <div class="predictions-intro">
+              <span class="pi-icon">💡</span>
+              <span
+                >Cada marcador exacto vale
+                <strong style="color: var(--accent)">3 pts</strong>. Acertar el
+                resultado (ganador/empate) sin marcador exacto vale
+                <strong style="color: var(--accent)">1 pt</strong>. Los
+                resultados se actualizarán durante el torneo.</span
+              >
+            </div>
+
+            <div class="rounds-section">
+              <!-- Fase de Grupos -->
+              <div class="round-block">
+                <div class="round-label">Fase de Grupos — Selección</div>
+                <div class="matches-grid">
+                  <!-- 8 matches representativos -->
+                  <div class="match-row" data-match="1">
+                    <span class="team-name">🇺🇸 Estados Unidos</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input field-group input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m1h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input field-group input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m1a"
+                      />
+                    </div>
+                    <span class="team-name right">🇧🇷 Brasil</span>
+                  </div>
+                  <div class="match-row" data-match="2">
+                    <span class="team-name">🇦🇷 Argentina</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m2h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m2a"
+                      />
+                    </div>
+                    <span class="team-name right">🇫🇷 Francia</span>
+                  </div>
+                  <div class="match-row" data-match="3">
+                    <span class="team-name">🇪🇸 España</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m3h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m3a"
+                      />
+                    </div>
+                    <span class="team-name right">🇩🇪 Alemania</span>
+                  </div>
+                  <div class="match-row" data-match="4">
+                    <span class="team-name">🇵🇹 Portugal</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m4h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m4a"
+                      />
+                    </div>
+                    <span class="team-name right">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</span>
+                  </div>
+                  <div class="match-row" data-match="5">
+                    <span class="team-name">🇨🇴 Colombia</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m5h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m5a"
+                      />
+                    </div>
+                    <span class="team-name right">🇲🇽 México</span>
+                  </div>
+                  <div class="match-row" data-match="6">
+                    <span class="team-name">🇳🇱 Países Bajos</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m6h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="m6a"
+                      />
+                    </div>
+                    <span class="team-name right">🇺🇾 Uruguay</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cuartos -->
+              <div class="round-block">
+                <div class="round-label">Cuartos de Final</div>
+                <div class="matches-grid">
+                  <div class="match-row">
+                    <span class="team-name">Clasificado A1</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q1h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q1a"
+                      />
+                    </div>
+                    <span class="team-name right">Clasificado B2</span>
+                  </div>
+                  <div class="match-row">
+                    <span class="team-name">Clasificado C1</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q2h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q2a"
+                      />
+                    </div>
+                    <span class="team-name right">Clasificado D2</span>
+                  </div>
+                  <div class="match-row">
+                    <span class="team-name">Clasificado E1</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q3h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q3a"
+                      />
+                    </div>
+                    <span class="team-name right">Clasificado F2</span>
+                  </div>
+                  <div class="match-row">
+                    <span class="team-name">Clasificado G1</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q4h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="q4a"
+                      />
+                    </div>
+                    <span class="team-name right">Clasificado H2</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Semifinales -->
+              <div class="round-block">
+                <div class="round-label">Semifinales</div>
+                <div class="matches-grid">
+                  <div class="match-row">
+                    <span class="team-name">Ganador CF1</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="s1h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="s1a"
+                      />
+                    </div>
+                    <span class="team-name right">Ganador CF2</span>
+                  </div>
+                  <div class="match-row">
+                    <span class="team-name">Ganador CF3</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="s2h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="s2a"
+                      />
+                    </div>
+                    <span class="team-name right">Ganador CF4</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Final & 3er Puesto -->
+              <div class="round-block">
+                <div class="round-label">Final & Tercer Puesto</div>
+                <div class="matches-grid">
+                  <div class="match-row">
+                    <span class="team-name">🥉 3er Puesto</span>
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="tp1h"
+                      />
+                      <span class="score-sep">–</span>
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="tp1a"
+                      />
+                    </div>
+                    <span class="team-name right">Perdedor SF2</span>
+                  </div>
+                  <div
+                    class="match-row"
+                    style="border-color: rgba(245, 158, 11, 0.35)"
+                  >
+                    <span class="team-name" style="color: var(--accent)"
+                      >🏆 FINAL</span
+                    >
+                    <div class="score-input-wrap">
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="f1h"
+                        style="border-color: var(--accent)"
+                      />
+                      <span class="score-sep" style="color: var(--accent)"
+                        >–</span
+                      >
+                      <input
+                        type="number"
+                        class="score-input"
+                        min="0"
+                        max="20"
+                        placeholder="0"
+                        id="f1a"
+                        style="border-color: var(--accent)"
+                      />
+                    </div>
+                    <span class="team-name right" style="color: var(--accent)"
+                      >🏆 FINAL</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Campeón -->
+              <div class="round-block">
+                <div class="round-label">Predicción Extra</div>
+                <div class="fields-grid two-col">
+                  <div class="field-group">
+                    <label for="campeon">🏆 Campeón Mundial</label>
+                    <select id="campeon">
+                      <option value="" disabled selected>
+                        Selecciona el campeón
+                      </option>
+                      <option>🇦🇷 Argentina</option>
+                      <option>🇫🇷 Francia</option>
+                      <option>🇧🇷 Brasil</option>
+                      <option>🇪🇸 España</option>
+                      <option>🇩🇪 Alemania</option>
+                      <option>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</option>
+                      <option>🇵🇹 Portugal</option>
+                      <option>🇺🇸 Estados Unidos</option>
+                      <option>🇳🇱 Países Bajos</option>
+                      <option>🇨🇴 Colombia</option>
+                      <option>🇺🇾 Uruguay</option>
+                      <option>🇲🇽 México</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                  <div class="field-group">
+                    <label for="goleador">⚽ Máximo Goleador</label>
+                    <input
+                      type="text"
+                      id="goleador"
+                      placeholder="Ej. Kylian Mbappé"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── STEP 3: Comprobante ─── -->
+        <div class="step-panel" id="panel3">
+          <div class="form-card-header">
+            <div class="header-icon">💳</div>
+            <div>
+              <h2>Comprobante de Pago</h2>
+              <p>Adjunta el soporte de tu transferencia Nequi</p>
+            </div>
+          </div>
+          <div style="padding: 2.5rem">
+            <div class="nequi-info">
+              <div class="nequi-title">📲 Datos de Pago</div>
+              <div class="nequi-row">
+                <span>Medio de pago</span>
+                <span>Nequi — Cuenta Oficial IEEE UD</span>
+              </div>
+              <div class="nequi-row">
+                <span>Número</span>
+                <span>
+                  <span id="nequiNum">300 000 0000</span>
+                  &nbsp;
+                  <button class="nequi-copy" onclick="copyNequi()">
+                    Copiar
+                  </button>
+                </span>
+              </div>
+              <div class="nequi-row">
+                <span>Valor</span>
+                <span style="color: var(--accent); font-size: 1.05rem"
+                  >$3.000 COP</span
+                >
+              </div>
+              <div class="nequi-row">
+                <span>Concepto</span>
+                <span>Polla Mundialista IEEE</span>
+              </div>
+            </div>
+
+            <div class="upload-area" id="uploadArea">
+              <input
+                type="file"
+                id="fileInput"
+                accept="image/*,.pdf"
+                onchange="handleFile(this)"
+              />
+              <div class="upload-icon">📎</div>
+              <div class="upload-title">Arrastra tu comprobante aquí</div>
+              <div class="upload-sub">
+                o haz clic para seleccionar el archivo
+              </div>
+              <div class="upload-formats">
+                <span class="fmt-tag">JPG</span>
+                <span class="fmt-tag">PNG</span>
+                <span class="fmt-tag">PDF</span>
+                <span class="fmt-tag">Max 5MB</span>
+              </div>
+            </div>
+
+            <div class="upload-preview" id="uploadPreview">
+              <span class="preview-icon">📄</span>
+              <span class="preview-name" id="previewName">—</span>
+              <span class="preview-size" id="previewSize">—</span>
+              <button
+                class="preview-remove"
+                onclick="removeFile()"
+                title="Eliminar"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div class="confirm-summary" id="confirmSummary">
+              <div class="confirm-title">Resumen de tu Polla</div>
+              <div class="confirm-row">
+                <span>Nombre:</span><span id="cs-nombre">—</span>
+              </div>
+              <div class="confirm-row">
+                <span>Código:</span><span id="cs-codigo">—</span>
+              </div>
+              <div class="confirm-row">
+                <span>Correo:</span><span id="cs-correo">—</span>
+              </div>
+              <div class="confirm-row">
+                <span>Teléfono:</span><span id="cs-telefono">—</span>
+              </div>
+              <div class="confirm-row">
+                <span>Carrera:</span><span id="cs-proyecto">—</span>
+              </div>
+              <div class="confirm-row">
+                <span>Campeón:</span><span id="cs-campeon">—</span>
+              </div>
+              <div class="confirm-row">
+                <span>Goleador:</span><span id="cs-goleador">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="success-screen" id="successScreen">
+          <div class="success-checkmark">✓</div>
+          <h2>¡Inscripción Enviada!</h2>
+          <p>
+            Recibimos tu polla y comprobante. El equipo IEEE validará tu pago en
+            máximo 48 horas y recibirás una confirmación.
+          </p>
+          <div class="success-id">
+            Tu número de polla: &nbsp;<strong id="pollNumber">#——</strong>
+          </div>
+        </div>
+        <div class="form-actions" id="formActions">
+          <span class="step-counter" id="stepCounter">Paso 1 de 3</span>
+          <button class="btn-back" id="btnBack" onclick="prevStep()" disabled>
+            ← Atrás
+          </button>
+          <button class="btn-next" id="btnNext" onclick="nextStep()">
+            Siguiente →
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
